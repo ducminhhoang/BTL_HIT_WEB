@@ -280,13 +280,14 @@ img {
     color: #666;
 }
 
-.button {
+.about .button {
     background-color: #029E9D;
     color: #fff;
     font-weight: 700;
+    border: 2px solid #029E9D;
 }
 
-.button:hover {
+.about .button:hover {
     background-color: #fff;
     color: #029E9D;
 }
