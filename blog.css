@@ -199,7 +199,7 @@ header{
 #banner{
     width: 100%;
     height: auto;
-    background-image: url(http://tourest.webtravel.vn/images/sub-page.png);
+    background-image: url('./img/desti1.png');
     position: relative;
 }
 #banner .banner__main{
