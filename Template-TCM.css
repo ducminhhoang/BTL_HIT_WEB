@@ -101,7 +101,6 @@ button {
 .button:hover {
     background-color: #029E9D;
     color: #fff;
-
 }
 
 /* HEADER */
@@ -112,6 +111,10 @@ header li {
 
 header a {
     text-decoration: none;
+    color: unset;
+}
+
+header a:hover {
     color: unset;
 }
 
@@ -382,7 +385,7 @@ footer li {
 
 footer a {
     text-decoration: none;
-    color: unset;
+    color: unset !important;
 }
 
 footer h2 {
@@ -399,6 +402,10 @@ footer h5 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+footer p {
+    color: unset;
 }
 
 footer img {

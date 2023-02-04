@@ -165,7 +165,6 @@ img {
     justify-content: flex-end !important;
 }
 
-.breadcrumb-banner .banner-info,
 .about-left,
 .about-right,
 .features-right,
@@ -268,7 +267,6 @@ img {
     }
 
     .about-right {
-        -ms-flex: 0 0 58.333333%;
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
@@ -282,37 +280,15 @@ img {
     color: #666;
 }
 
-.booking-button {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.booking-button {
-    line-height: 26px;
-    border: 2px solid #029E9D;
-    border-radius: 5px;
-    padding: 15px 25px;
+.button {
+    background-color: #029E9D;
     color: #fff;
     font-weight: 700;
-    background: #029E9D;
-    text-transform: capitalize;
-    opacity: 1;
-    box-shadow: none !important;
-    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #029E9D;
 }
 
 /* FEATURES */
@@ -332,14 +308,6 @@ img {
 
 .section-spacing.features .play-button {
     margin: 15px 0 0;
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-}
-
-.section-spacing.features .play-button a {
-    position: relative;
-    display: inline-block;
 }
 
 .section-spacing.features .play-button a i {
@@ -352,9 +320,6 @@ img {
     text-align: center;
     font-size: 18px;
     color: #fff;
-    position: relative;
-    z-index: 6;
-    transition: all 0.3s ease-in-out;
 }
 
 .section-spacing.features .features-items h3 {
