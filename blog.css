@@ -221,10 +221,108 @@ header{
 .banner-tag .active{
     color:rgba(255, 255, 255, 0.87)
 }
+.section{
+    padding: 110px 0;
+    float: left;
+    width: 100%;
+    background-image: url(./img/bg-graphics.png);
+    background-repeat: no-repeat;
+    background-position: center top 40px;
+    background-size: 100% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.section h2, .section h3{
+    text-align: center;
+}
+.section h2{
+    color: #111;
+}
+.container{
+    max-width: 1200px;
+}
+.card-blogers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.bloger{
+    position: relative;
+    width: 30%;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+.bloger img{
+    width: 100%;
+    height: auto;
+}
+.card-bloger{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 9%);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    z-index: -1;
+}
+.card-bloger .card-body{
+    padding: 42px;
+    flex: 1 1 auto;
+    min-height: 1px;
+    text-align: left;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+.card-bloger .card-body h5{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    margin-bottom: 0;
+}
+.card-bloger .card-body p{
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 0;
+}
+.infor-bloger{
+    margin-left: 12px;
+}
+.timeup{
+    font-size: 12px;
+    color: #878787;
+    margin-left: auto;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+}    
+.read-more{
+    font-size: 16px;
+    color: #029E9D;
+    font-weight: 600;
+    display: block;
+    text-align: right;
+    transition: 0.3 ease-in-out;
+}
+.read-more:hover{
+    color:#414C61;
+}
+.card-bloger h6{
+    color: #666;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 24px;
+}
 footer{
     width: 100%;
     padding: 70px 4px;
-    background-image: url(http://tourest.webtravel.vn/images/footer-bg.png);
+    background-image: url(./img/footer-bg.png);
     float: left;
     background-attachment:fixed;
     background-color: #17233E;
@@ -364,6 +462,9 @@ footer{
         width: 370px;
         margin-bottom: 40px;
     }
+    .bloger{
+        width: 45%;
+    }
 }
 
 /* mobile */
@@ -387,4 +488,13 @@ footer{
     .footer_bot_right{
         margin-top: 16px;
     }
+    .bloger{
+        width: 100%;
+    }
+    .container{
+        max-width: 540px;
+    }
+}
+.card-blogers{
+    flex-wrap: wrap;
 }
