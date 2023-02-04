@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+    font-family: Abril Fatface;
+    src: url("http://tourest.webtravel.vn/lib/font/AbrilFatface-Regular.ttf");
+}
+
+@font-face {
+    font-family: Comforter Brush;
+    src: url("http://tourest.webtravel.vn/lib/font/ComforterBrush-Regular.ttf");
+}
+
+@font-face {
+    font-family: Heebo;
+    src: url("http://tourest.webtravel.vn/lib/font/Heebo-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+}
+
+
+/* SELECTOR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comforter Brush", cursive;
+    font-family: "Abril Fatface", cursive;
+    font-family: "Heebo", sans-serif;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    overflow-x: hidden;
+    color: #666;
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+    outline: none !important;
+    text-decoration: none;
+}
+
+a {
+    transition: all 0.2s ease-in-out;
+    color: #333;
+}
+
+a:hover {
+    color: #6abe45;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 75px;
+    margin: 0 0 28px;
+    font-family: "Abril Fatface", cursive;
+    color: #17233E;
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 52px;
+    font-family: "Abril Fatface", cursive;
+    margin: 0 0 25px;
+}
+
+@media (max-width: 575.98px) {
+    h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0 0 15px;
+    font-family: "Comforter Brush", cursive;
+    color: #FDC703;
+    line-height: 34px;
+}
+
+h4 {
+    font-size: 26px;
+    color: #FDC703;
+    font-weight: 400;
+    margin: 0 0 0px;
+    font-family: "Comforter Brush", cursive;
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: #666;
+}
+
+h6 {
+    font-size: 19px;
+    line-height: 26px;
+    color: #666;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 28px;
+    color: #888;
+    margin: 0 0 25px;
+}
+
+ul,
+ol {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+/*  COMMON */
+
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+
+.breadcrumb-banner .banner-info,
+.about-left,
+.about-right,
+.features-right,
+.team-member {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.section-spacing {
+    padding: 110px 0;
+    float: left;
+    width: 100%;
+    background-image: url("http://tourest.webtravel.vn/images/bg-graphics.png");
+    background-repeat: no-repeat;
+    background-position: center top 40px;
+    background-size: 100% auto;
+}
+
+.section-spacing {
+    padding: 60px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.section-title {
+    width: 100%;
+    float: left;
+    height: auto;
+    margin: 0 0;
+}
+
+.section-title h2 {
+    position: relative;
+}
+
+@media (max-width: 767.98px) {
+    .section-title {
+        margin: 0 0 60px;
+    }
+}
+
+/* ABOUT */
+
+.about .about-info {
+    margin: 30px 0;
+}
+
+.about .about-info__item {
+    display: flex;
+}
+
+.media-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 58px;
+    background: #029E9D;
+    border-radius: 50%;
+}
+
+.about .about-info__item .about-icon .media-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 58px;
+    background: #029E9D;
+    border-radius: 50%;
+}
+
+.about .about-info__item .about-icon .media-icon i {
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+
+    .about-left,
+    .about-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .about-left {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+
+    .about-right {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+}
+
+.about .about-info__item .about-text {
+    margin-left: 1rem;
+}
+
+.about .about-info__item .about-text h5 {
+    color: #666;
+}
+
+.booking-button {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.booking-button {
+    line-height: 26px;
+    border: 2px solid #029E9D;
+    border-radius: 5px;
+    padding: 15px 25px;
+    color: #fff;
+    font-weight: 700;
+    background: #029E9D;
+    text-transform: capitalize;
+    opacity: 1;
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* FEATURES */
+
+.section-spacing.features {
+    background-image: url("http://tourest.webtravel.vn/images/features.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (max-width: 576px) {
+    .section-spacing.features {
+        background-image: none !important;
+        background-color: #fcfcfc;
+    }
+}
+
+.section-spacing.features .play-button {
+    margin: 15px 0 0;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.section-spacing.features .play-button a {
+    position: relative;
+    display: inline-block;
+}
+
+.section-spacing.features .play-button a i {
+    display: inline-block;
+    background: #029E9D;
+    line-height: 60px;
+    border: 20px solid #d1e9e8;
+    border-radius: 50%;
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    z-index: 6;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-spacing.features .features-items h3 {
+    font-size: 34px;
+    color: #029E9D;
+    font-family: "Heebo", sans-serif;
+    font-weight: 600;
+}
+
+.section-spacing.features .features-items h4 {
+    font-size: 18px;
+    color: #666;
+    font-family: "Heebo", sans-serif;
+    font-weight: 400;
+}
+
+.section-spacing.features .features-items {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 0;
+}
+
+@media (min-width: 992px) {
+
+    .features-right {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+}
+
+/* OUR TEAM */
+
+.our-team .section-title {
+    margin: 0 0 70px;
+    text-align: center;
+}
+
+.our-team .team-item img {
+    width: 100%;
+}
+
+.our-team .team-item .team-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.our-team .team-item .team-body .team-text {
+    text-align: center;
+}
+
+.our-team .team-item .team-body .team-text h4 {
+    font-size: 24px;
+    color: #17233E;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "Heebo";
+    padding-bottom: 10px;
+}
+
+.our-team .team-item .team-body .team-text p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #878787;
+    margin-bottom: 0;
+}
+
+.our-team .team-item .team-body .h-border {
+    display: none;
+}
+
+.h-border {
+    height: 77px;
+    border: 1px solid #029E9D;
+}
+
+.our-team .team-item .team-body .team-social {
+    display: flex;
+    gap: 10px;
+}
+
+.our-team .team-item .team-body .team-social li a {
+    width: 34px;
+    height: 34px;
+    background-color: #E1E1E1;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #878787;
+}
+
+@media (min-width: 768px) {
+
+    .team-member {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .our-team .team-item .team-body {
+        flex-direction: row;
+    }
+
+    .our-team .team-item .team-body .team-text {
+        text-align: left;
+    }
+
+    .our-team .team-item .team-body .h-border {
+        display: block;
+        margin-left: 0;
+        height: 61px;
+        border: 1px solid #DEDEDE;
+    }
+
+    .our-team .team-item .team-body .team-social {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .team-member {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}

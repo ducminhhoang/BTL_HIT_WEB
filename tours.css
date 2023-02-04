@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+    font-family: Abril Fatface;
+    src: url("../font/AbrilFatface-Regular.ttf");
+}
+
+@font-face {
+    font-family: Comforter Brush;
+    src: url("../font/ComforterBrush-Regular.ttf");
+}
+
+@font-face {
+    font-family: Heebo;
+    src: url("../font/Heebo-VariableFont_wght.ttf");
+}
+
+/* SELECTOR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Heebo", sans-serif;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    overflow-x: hidden;
+    color: #666;
+}
+
+div {
+    display: block;
+}
+
+header,
+main,
+footer,
+nav {
+    display: block;
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+    outline: none !important;
+    text-decoration: none;
+}
+
+a {
+    transition: all 0.2s ease-in-out;
+    color: #333;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    overflow: visible;
+    text-transform: none;
+}
+
+button,
+input {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    overflow: visible;
+}
+
+ul,
+ol {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: list-item;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: #666;
+}
+
+/* COMMON */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col,
+.tour-group-item,
+.footer .footer-widget {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+
+.fa,
+.fa-solid,
+.fas {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+
+/* TOUR */
+
+.tours {
+    padding: 100px 0;
+}
+
+.tour-bar-row {
+    margin-bottom: 50px !important;
+    align-items: center !important;
+}
+
+.tour-bar-row .justify-content-end {
+    display: flex !important;
+}
+
+.tour-bar-text {
+    color: #878787;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+}
+
+.tours .custom-select .nice-select {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 15px;
+    padding-right: 30px;
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
+    font-size: 14px;
+}
+
+.tour-bar-icon i {
+    color: #878787;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+    padding: 13.5px;
+    margin-left: 10px;
+}
+
+/*  */
+
+@media (min-width: 768px) {
+    .tour-group-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .tour-group-item {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.tour-card {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
+    position: relative;
+    margin: 0 0 30px;
+    z-index: -1;
+}
+
+.list-tour-group .tour-card {
+    display: block;
+    z-index: 1;
+}
+
+span.tour-duration {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #FDC703;
+    color: #fff;
+    padding: 14px 10px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+}
+
+span.tour-duration i {
+    display: block;
+    font-size: 20px;
+}
+
+.tour-card .card-body {
+    padding: 30px;
+    min-height: 1px;
+}
+
+.tour-card .card-body .tour-tags {
+    margin: 0 0 20px;
+}
+
+.tour-card .card-body .tour-tags span {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 14px;
+    border-radius: 5px;
+    color: #fff;
+    background: #029E9D;
+    font-weight: 400;
+    margin: 0 20px 10px 0;
+}
+
+.tour-card .card-body .tour-tags span {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 14px;
+    border-radius: 5px;
+    color: #fff;
+    background: #029E9D;
+    font-weight: 400;
+    margin: 0 20px 10px 0;
+}
+
+.tour-card .card-body .tour-tags span.tour-rating {
+    background: #FDC703;
+}
+
+.tour-card h6 {
+    transition: all 0.3s ease-in-out;
+    color: #666;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.tour-card p {
+    color: #9B9B9B;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0 !important;
+}
+
+/*  */
+
+.pagination-container {
+    width: 100%;
+    float: left;
+    height: auto;
+    margin: 30px 0 0;
+}
+
+.tours .pagination-container {
+    margin: 40px 0 0;
+}
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+.pagination-container .pagination {
+    margin: 0;
+    justify-content: center;
+}
+
+.pagination-container .pagination li>a,
+.pagination-container .pagination li>span {
+    margin-left: 5px;
+    padding: 10px 10px;
+    border-radius: 4px !important;
+    color: #999;
+    font-size: 16px;
+    font-weight: 500;
+    width: 44px;
+    line-height: 22px;
+    border: 1px solid #f5f5f5;
+    display: inline-block;
+    text-align: center;
+}
+
+.pagination-container .pagination li:first-child a {
+    margin: 0;
+}
+
+.pagination-container .pagination li>a,
+.pagination-container .pagination li>span {
+    margin-left: 5px;
+    padding: 10px 10px;
+    border-radius: 4px !important;
+    color: #999;
+    font-size: 16px;
+    font-weight: 500;
+    width: 44px;
+    line-height: 22px;
+    border: 1px solid #f5f5f5;
+    display: inline-block;
+    text-align: center;
+}
+
+.pagination-container .pagination>.active>a,
+.pagination-container .pagination>.active>a:focus,
+.pagination-container .pagination>.active>a:hover,
+.pagination-container .pagination>.active>span,
+.pagination-container .pagination>.active>span:focus,
+.pagination-container .pagination>.active>span:hover,
+.pagination-container .pagination>li>a:focus,
+.pagination-container .pagination>li>a:hover,
+.pagination-container .pagination>li>span:focus,
+.pagination-container .pagination>li>span:hover {
+    background-color: #029E9D;
+    border-color: #029E9D;
+    color: #fff;
+}
+
+.pagination-container .pagination li>a,
+.pagination-container .pagination li>span {
+    margin-left: 5px;
+    padding: 10px 10px;
+    border-radius: 4px !important;
+    color: #999;
+    font-size: 16px;
+    font-weight: 500;
+    width: 44px;
+    line-height: 22px;
+    border: 1px solid #f5f5f5;
+    display: inline-block;
+    text-align: center;
+}
