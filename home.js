@@ -173,7 +173,7 @@ obsever.observe(features)
 const causolo = document.querySelector('.causolo');
 const review_slides = document.querySelectorAll('.slide-item');
 
-let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = 0;
+let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = widthWapper*2;
 const dragStart = (e)=>{
     isDragStart = true;
     prevPageX = e.pageX;
@@ -186,7 +186,7 @@ const dragging = (e)=>{
     causolo.classList.add('dragging');
     let positionDiff = e.pageX - prevPageX;
     console.log(positionDiff);
-    causolo.style.transform = 'translateX(' + (-positionCurrent - positionDiff) + 'px)';
+    causolo.style.transform = 'translateX(' + (-positionCurrent + positionDiff) + 'px)';
 }
 const dragEnd = (e)=>{
     positionCurrent = e.
