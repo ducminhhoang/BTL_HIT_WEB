@@ -174,6 +174,7 @@ const causolo = document.querySelector('.causolo');
 const review_slides = document.querySelectorAll('.slide-item');
 
 let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = widthWapper*2;
+causolo.style.transform = 'translateX(' + (-positionCurrent) + 'px)';
 const dragStart = (e)=>{
     isDragStart = true;
     prevPageX = e.pageX;
