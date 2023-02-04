@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
 
-@font-face {
-    font-family: Abril Fatface;
-    src: url("../font/AbrilFatface-Regular.ttf");
-}
-
-@font-face {
-    font-family: Comforter Brush;
-    src: url("../font/ComforterBrush-Regular.ttf");
-}
-
-@font-face {
-    font-family: Heebo;
-    src: url("../font/Heebo-VariableFont_wght.ttf");
-}
-
 /* SELECTOR */
 
 * {

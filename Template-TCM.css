@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
 
-@font-face {
-    font-family: Abril Fatface;
-    src: url("../font/AbrilFatface-Regular.ttf");
-}
-
-@font-face {
-    font-family: Comforter Brush;
-    src: url("../font/ComforterBrush-Regular.ttf");
-}
-
-@font-face {
-    font-family: Heebo;
-    src: url("../font/Heebo-VariableFont_wght.ttf");
-}
-
 /* SELECTOR */
 
 * {
@@ -296,7 +281,7 @@ header {
 /* BREADCRUMB BANNER */
 
 .breadcrumb-banner {
-    background: url('http://tourest.webtravel.vn/images/sub-page.png');
+    background: url('./img/sub-page.png');
     position: relative;
 }
 
@@ -371,7 +356,7 @@ header {
 footer {
     width: 100%;
     padding: 70px 4px;
-    background-image: url(http://tourest.webtravel.vn/images/footer-bg.png);
+    background-image: url(./img/footer-bg.png);
     float: left;
     background-attachment: fixed;
     background-color: #17233E;

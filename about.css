@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
 
-@font-face {
-    font-family: Abril Fatface;
-    src: url("http://tourest.webtravel.vn/lib/font/AbrilFatface-Regular.ttf");
-}
-
-@font-face {
-    font-family: Comforter Brush;
-    src: url("http://tourest.webtravel.vn/lib/font/ComforterBrush-Regular.ttf");
-}
-
-@font-face {
-    font-family: Heebo;
-    src: url("http://tourest.webtravel.vn/lib/font/Heebo-VariableFont_wght.ttf");
-}
-
 * {
     margin: 0;
     padding: 0;
