@@ -164,7 +164,7 @@ img {
     padding: 110px 0;
     float: left;
     width: 100%;
-    background-image: url("http://tourest.webtravel.vn/images/bg-graphics.png");
+    background-image: url("./img");
     background-repeat: no-repeat;
     background-position: center top 40px;
     background-size: 100% auto;
