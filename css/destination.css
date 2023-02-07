@@ -13,11 +13,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 .row{ 
-    flex-wrap: wrap;
     display: flex;
     justify-content: center; 
+    
 }
 .col-md-6{
     flex: 0 0 50%;
@@ -28,7 +29,7 @@
     padding-left: 15px;
 }
 .col-md-4{
-    max-width: 33%;
+    max-width: 33.3%;
     flex: 0 0 50%;   
     position: relative;
     height: auto;
@@ -108,13 +109,4 @@ img{
     width: 100%;
     height: auto;
     transition:  all 0.5s ease; 
-}
-@media (max-width:768px) {
-    .row{
-        display:flex;
-        flex-direction: column;
-    }
-    
-    
-
 }
