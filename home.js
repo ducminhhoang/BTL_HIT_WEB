@@ -173,12 +173,15 @@ obsever.observe(features)
 const causolo = document.querySelector('.causolo');
 const review_slides = document.querySelectorAll('.slide-item');
 
-let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = 0;
+let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = widthWapper*2;
 const dragStart = (e)=>{
     isDragStart = true;
     prevPageX = e.pageX;
     prevScrollLeft = causolo.scrollLeft;
+    console.log('chạy vô start');
 }
+
+causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
 
 const dragging = (e)=>{
     if (!isDragStart) return;
@@ -189,14 +192,25 @@ const dragging = (e)=>{
     causolo.style.transform = 'translateX(' + (-positionCurrent - positionDiff) + 'px)';
 }
 const dragEnd = (e)=>{
-    positionCurrent = e.
+    let positionDiff = e.pageX - prevPageX;
+    positionCurrent = positionCurrent + positionDiff;
     isDragStart = false;
     causolo.classList.remove('dragging');
+    console.log('chạy vô end');
+    console.log(isDragStart);
+}
+
+const dragStop = ()=>{
+    isDragStart = false;
+    causolo.classList.remove('dragging');
+    console.log(isDragStart);
 }
 
 causolo.addEventListener('mousedown', dragStart);
 causolo.addEventListener('mousemove', dragging);
 causolo.addEventListener('mouseup', dragEnd);
+
+
 let slideClone;
 
 
