@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+h2{
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 52px;
+    font-family: "Abril Fatface", cursive;
+    margin: 0 0 25px;
+    color: #fff;
+}
+h5{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+img{
+    height: 100%;
+    width: auto;
+}
+input{
+    border: none;
+    outline: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+}
+.button{
+    padding: 15px 25px;
+    background-color: #fff;
+    color: #029E9D;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background-color: #029E9D;
+    color:#fff;
+
+}
+header *{
+    overflow: visible;
+}
+header{
+    width: 100%;
+    height: 115px;
+    background-color: #029E9D;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+.header__center, .footer__top, .footer__bot, .footer_bot_left, .footer_bot_right, .banner-tag{
+    display: flex;
+}
+.header__center li, .header__menu li{
+    padding: 15px 0;
+    margin: 0 20px;
+    position: relative;
+    overflow: visible;
+}
+.header__center li a,.header__menu li a{
+    position: relative;
+    z-index: 6;
+}
+.header__center li::before, .header__menu li::before{
+    content: '';
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: #028B8A;
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+.header__center li:hover::before, .header__menu li:hover::before{
+    opacity: 1;
+}
+.header__center .active::before, .header__menu .active::before{
+    opacity: 1;
+}
+.icon__menu{
+    display: none;
+}
+.icon__menu{
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.icon {
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    position: relative;
+    transition: all 0.3s ease-out;
+    vertical-align: middle;
+}
+.icon::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -11px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+    transition: all 0.35s ease-out;
+    backface-visibility: hidden;
+}
+.icon::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -11px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+    transition: all 0.35s ease-out;
+    backface-visibility: hidden;
+}
+.collapsed .icon::after{
+    transform: rotate(45deg);
+    top: 0;
+}
+.collapsed .icon::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.collapsed .icon{
+    background: rgba(0, 0, 0, 0);
+}
+.header__menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #029E9D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 11;
+    padding: 16px;
+    overflow: hidden;
+    text-align: center;
+    display: none;
+}
+.header__menu .button{
+    margin-top: 20px;
+    overflow: visible;
+}
+
+@keyframes hienthimenu {
+    from {
+        height: 0px;
+    }
+    to{
+        height: 400px;
+    }
+}
+@keyframes anmenu{
+    from{
+        height: 400px;
+    }
+    to{
+        height: 0px;
+    }
+}
+
+#banner{
+    width: 100%;
+    height: auto;
+    background-image: url(http://tourest.webtravel.vn/images/sub-page.png);
+    position: relative;
+}
+#banner .banner__main{
+    width: 100%;
+    height: 100%;
+    background: #029E9D;
+    opacity: 0.87;
+    padding: 100px 15px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner-tag li{
+    margin: 0 4px;
+    font-size: 18px;
+}
+.banner-tag .active{
+    color:rgba(255, 255, 255, 0.87)
+}
+footer{
+    width: 100%;
+    padding: 70px 4px;
+    background-image: url(http://tourest.webtravel.vn/images/footer-bg.png);
+    float: left;
+    background-attachment:fixed;
+    background-color: #17233E;
+    color: #fff;
+}
+.footer__top{
+    width: 100%;
+    padding: 0 16px;
+    justify-content: center;
+}
+.footer__top-item{
+    width: auto;
+    width: 200px;
+    padding: 0 15px;
+}
+.col1{
+    width: 300px;
+}
+.col4{
+    width: 470px;
+}
+.footer__top-item p{
+    max-width: 100%;
+    opacity: 0.8;
+}
+.footer__top ul li{
+    font-size: 16px;
+    padding: 4px 0;
+    opacity: 0.8;
+}
+.footer__top-item form{
+    margin-top: 30px;
+    position: relative;
+    width: auto;
+}
+
+.footer__top-item input{
+    width: 100%;
+    height: 74px;
+    font-size: 16px;
+    font-weight: 400;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease-out;
+    color: #B9B9B9;
+    padding: 20px;
+}
+.footer__top-item form button{
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    background-color: #029E9D;
+    height: 74px;
+    border-radius: 5px;
+    padding: 10px 25px;
+}
+.footer__bot{
+    width: 100%;
+    height: 56px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 0 105px;
+    justify-content: space-between;
+}
+.footer_bot_left{
+    height: 56px;
+    align-items: center;
+    color:rgba(255, 255, 255, 0.8)
+    
+}
+.footer_bot_left img{
+    width: auto;
+}
+.h-border{
+    width: 1.6px;
+    height: 56px;
+    background-color:  rgba(255, 255, 255, 0.8);
+    margin: 0 30px;
+}
+.footer_bot_right li a{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #414C61;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+}
+.footer_bot_right li i{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+#btn-backtop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #029E9D;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 99;
+    transition: all 0.2s ease-in-out;
+    display: none;
+}
+#btn-backtop:hover{
+    transform: translateY(-6px);
+}
+
+@media only screen and (max-width: 1200px){
+    .footer__top-item{
+        width: 200px;
+    }
+    .col1{
+        width: 240px;
+    }
+    .col4{
+        width: 370px;
+    }
+}
+
+/* tablet */
+@media only screen and (max-width: 990px){
+    .header__center{
+        display: none;
+    }
+    .header__right .button{
+        display: none;
+    }
+    .icon__menu{
+        display: block;
+    }
+    .footer__top{
+        flex-wrap: wrap;
+    }
+    .footer__top-item{
+        width: 370px;
+        margin-bottom: 40px;
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 797px){
+    .footer__top{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .footer__top ul li, .footer__top-item p{
+        font-size: 14px;
+    }
+    .footer__top-item{
+        width: 100%;
+        max-width: 540px;
+    }
+    .footer__bot{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_bot_right{
+        margin-top: 16px;
+    }   
+    .row{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .row-bottom{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .destination-item{
+        width: 100%;
+    }
+}
+
+.destination{
+    background-image: url(./bg-graphics.png);
+    width:100%;
+    margin:90px 0 110px 0;
+   
+}
+.container{
+    margin: 0 50px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.row{ 
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center; 
+}
+.col-md-6{
+    flex:0 0 50%;
+    width: 35%;
+}
+.col-md-4{
+    max-width: 33%;
+}
+
+.destination-item{
+    width: 100%;
+    height: auto;
+    position:relative;
+    margin:13px;
+    overflow: hidden;
+}
+.destination-item .infor-overlay{
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom: 0;
+    padding:30px;
+    
+}
+.destination-item .infor-overlay h4{
+    z-index: 3;
+    position: relative;
+    font-family: 'Comforter Brush', cursive;
+}
+h4{
+    font-size: 26px;
+    color: #FDC703;
+    font-weight: 400;
+}
+h3{
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0 0 15px;
+    line-height: 34px;  
+    color:#fff;
+    font-family:"Abril Fatface",cursive;
+}
+.destination-item .infor-overlay h3{
+    z-index: 3;
+    position:relative;   
+    margin:0;
+}
+img{
+    width:100%;
+}
+.destination-item img{
+    width:100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.destination-item:hover img{
+    transform: scale(1.2);
+}
+
+ .destination a{
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.destination a::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    bottom:0;
+    content: "";
+    background-image: linear-gradient(rgba(23, 35, 62, 0), #17233e);
+    opacity: 0.7;
+    z-index: 2;
+    border-radius: 0 0 5px 5px;
+} 
+ .destination a img{
+    width: 100%;
+    height: auto;
+    transition:  all 0.5s ease; 
+}
