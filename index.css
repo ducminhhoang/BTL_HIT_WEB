@@ -394,7 +394,7 @@ footer{
     .footer_bot_right{
         margin-top: 16px;
     }   
-    .row{
+    /* .row{
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -406,7 +406,7 @@ footer{
     }
     .destination-item{
         width: 100%;
-    }
+    } */
 }
 
 .destination{
@@ -507,13 +507,4 @@ img{
     width: 100%;
     height: auto;
     transition:  all 0.5s ease; 
-}
-.act{
-    z-index: 2;
-}
-.presl{
-    z-index: 1;
-}
-.nextsl{
-    z-index: 3;
 }

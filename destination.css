@@ -3,7 +3,7 @@
     padding:0;
 }
 .destination{
-    background-image: url(./bg-graphics.png);
+    background-image: url(./img/bg-graphics.png);
     width:100%;
     margin:90px 0 110px 0;
    
@@ -109,4 +109,10 @@ img{
     width: 100%;
     height: auto;
     transition:  all 0.5s ease; 
+}
+@media only screen and (max-width: 767px){
+    .col-md-4{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

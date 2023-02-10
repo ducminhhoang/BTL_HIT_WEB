@@ -175,6 +175,10 @@ obsever.observe(features)
 const causolo = document.querySelector('.causolo');
 const review_slides = document.querySelectorAll('.slide-item');
 let slideNow = 2;
+var timeOut_slide = setTimeout(()=>{
+    causolo.style.transition = 'all 0s ease';
+    causolo.style.transform = 'translateX('+(-positionCurrent )+'px)';
+}, 1200);
 
 // khởi tạo slide
 function clone() {
@@ -213,9 +217,6 @@ makeSlideReview(widthWapper);
 
 const review_slidess = document.querySelectorAll('.slide-item');
 //kéo thả cho slide chạy
-review_slidess[2].classList.add('act');
-review_slidess[1].classList.add('presl');
-review_slidess[3].classList.add('nextsl');
 let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = widthWapper*2;
 const dragStart = (e)=>{
     isDragStart = true;
@@ -228,6 +229,7 @@ causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
 
 const dragging = (e)=>{
     if (!isDragStart) return;
+    clearTimeout(timeOut_slide);
     e.preventDefault();
     causolo.classList.add('dragging');
     let positionDiff = e.pageX - prevPageX;
@@ -245,20 +247,8 @@ const dragEnd = (e)=>{
         if (slideNow > 3){
             slideNow = 2;
         }
-        setTimeout(()=>{
-            
-            causolo.style.transition = 'all 0s ease';
-            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
-            review_slidess[slideNow].classList.add('act');
-            review_slidess[slideNow].classList.remove('presl');
-            review_slidess[slideNow].classList.remove('nextsl');
-            review_slidess[slideNow+1].classList.add('nextsl');
-            review_slidess[slideNow-1].classList.add('presl');
-            review_slidess[slideNow-1].classList.remove('act');
-            review_slidess[slideNow-1].classList.remove('nexsl');
-            review_slidess[slideNow+1].classList.remove('presl');
-            review_slidess[slideNow+1].classList.remove('act');
-        }, 1200);
+        positionCurrent = widthWapper*(slideNow - 1);
+        timeOut_slide;
     }
     else if (positionDiff > 0){
         causolo.style.transition = '1.2s ease-in-out';
@@ -267,19 +257,8 @@ const dragEnd = (e)=>{
         if (slideNow < 2){
             slideNow = 3;
         }
-        setTimeout(()=>{
-            causolo.style.transition = 'all 0s ease';
-            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
-            review_slidess[slideNow].classList.add('act');
-            review_slidess[slideNow].classList.remove('presl');
-            review_slidess[slideNow].classList.remove('nextsl');
-            review_slidess[slideNow+1].classList.add('nextsl');
-            review_slidess[slideNow-1].classList.add('presl');
-            review_slidess[slideNow-1].classList.remove('act');
-            review_slidess[slideNow-1].classList.remove('nexsl');
-            review_slidess[slideNow+1].classList.remove('presl');
-            review_slidess[slideNow+1].classList.remove('act');
-        }, 1200);
+        positionCurrent = widthWapper*(slideNow - 1);
+        timeOut_slide;
     }
 }
 
@@ -303,18 +282,10 @@ button_next.addEventListener('click', () => {
         if (slideNow < 2){
             slideNow = 3;
         }
+        positionCurrent = widthWapper*(slideNow - 1);
         setTimeout(()=>{
             causolo.style.transition = 'all 0s ease';
-            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
-            review_slidess[slideNow].classList.add('act');
-            review_slidess[slideNow].classList.remove('presl');
-            review_slidess[slideNow].classList.remove('nextsl');
-            review_slidess[slideNow+1].classList.add('nextsl');
-            review_slidess[slideNow-1].classList.add('presl');
-            review_slidess[slideNow-1].classList.remove('act');
-            review_slidess[slideNow-1].classList.remove('nexsl');
-            review_slidess[slideNow+1].classList.remove('presl');
-            review_slidess[slideNow+1].classList.remove('act');
+            causolo.style.transform = 'translateX('+(-positionCurrent )+'px)';
         }, 1200);
 })
 button_pre.addEventListener('click', ()=>{
@@ -324,19 +295,10 @@ button_pre.addEventListener('click', ()=>{
         if (slideNow > 3){
             slideNow = 2;
         }
+        positionCurrent = widthWapper*(slideNow - 1);
         setTimeout(()=>{
-            
             causolo.style.transition = 'all 0s ease';
-            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
-            review_slidess[slideNow].classList.add('act');
-            review_slidess[slideNow].classList.remove('presl');
-            review_slidess[slideNow].classList.remove('nextsl');
-            review_slidess[slideNow+1].classList.add('nextsl');
-            review_slidess[slideNow-1].classList.add('presl');
-            review_slidess[slideNow-1].classList.remove('act');
-            review_slidess[slideNow-1].classList.remove('nexsl');
-            review_slidess[slideNow+1].classList.remove('presl');
-            review_slidess[slideNow+1].classList.remove('act');
+            causolo.style.transform = 'translateX('+(-positionCurrent )+'px)';
         }, 1200);
 })
 
