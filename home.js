@@ -35,9 +35,11 @@ function scrollFunction() {
         document.getElementById("btn-backtop").style.display = "block";
         document.getElementById("btn-backtop").style.opacity = "1";
     } else {
-        clearTimeout(timeOut_scroll)
+        clearTimeout(timeOut_scroll);
         document.getElementById("btn-backtop").style.opacity = "0";
-        timeOut_scroll
+        setTimeout(function(){
+            document.getElementById("btn-backtop").style.display = "none";
+        }, 200);
     }
 }
 
@@ -172,36 +174,9 @@ obsever.observe(features)
 */
 const causolo = document.querySelector('.causolo');
 const review_slides = document.querySelectorAll('.slide-item');
+let slideNow = 2;
 
-let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = widthWapper*2;
-causolo.style.transform = 'translateX(' + (-positionCurrent) + 'px)';
-const dragStart = (e)=>{
-    isDragStart = true;
-    prevPageX = e.pageX;
-    prevScrollLeft = causolo.scrollLeft;
-}
-
-const dragging = (e)=>{
-    if (!isDragStart) return;
-    e.preventDefault();
-    causolo.classList.add('dragging');
-    let positionDiff = e.pageX - prevPageX;
-    console.log(positionDiff);
-    causolo.style.transform = 'translateX(' + (-positionCurrent + positionDiff) + 'px)';
-}
-const dragEnd = (e)=>{
-    positionCurrent = e.
-    isDragStart = false;
-    causolo.classList.remove('dragging');
-}
-
-causolo.addEventListener('mousedown', dragStart);
-causolo.addEventListener('mousemove', dragging);
-causolo.addEventListener('mouseup', dragEnd);
-let slideClone;
-
-
-
+// khởi tạo slide
 function clone() {
     
     for (let i = review_slides.length - 1; i >= 0; i--) {
@@ -236,23 +211,134 @@ var changeSlideReview = function(widthWapper){
 
 makeSlideReview(widthWapper);
 
+const review_slidess = document.querySelectorAll('.slide-item');
+//kéo thả cho slide chạy
+review_slidess[2].classList.add('act');
+review_slidess[1].classList.add('presl');
+review_slidess[3].classList.add('nextsl');
+let isDragStart = false, prevPageX, prevScrollLeft, positionCurrent = widthWapper*2;
+const dragStart = (e)=>{
+    isDragStart = true;
+    prevPageX = e.pageX;
+    prevScrollLeft = causolo.scrollLeft;
+}
+
+causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
 
 
-// // causolo.addEventListener('mousemove', dragging);
+const dragging = (e)=>{
+    if (!isDragStart) return;
+    e.preventDefault();
+    causolo.classList.add('dragging');
+    let positionDiff = e.pageX - prevPageX;
+    console.log(positionDiff);
+    causolo.style.transform = 'translateX(' + (-positionCurrent - positionDiff) + 'px)';
+}
+const dragEnd = (e)=>{
+    let positionDiff = e.pageX - prevPageX;
+    isDragStart = false;
+    causolo.classList.remove('dragging');
+    if (positionDiff < 0){
+        causolo.style.transition = 'all 1.2s ease';
+        causolo.style.transform = 'translateX(' + (-positionCurrent + widthWapper) +'px)';
+        slideNow += 1;
+        if (slideNow > 3){
+            slideNow = 2;
+        }
+        setTimeout(()=>{
+            
+            causolo.style.transition = 'all 0s ease';
+            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
+            review_slidess[slideNow].classList.add('act');
+            review_slidess[slideNow].classList.remove('presl');
+            review_slidess[slideNow].classList.remove('nextsl');
+            review_slidess[slideNow+1].classList.add('nextsl');
+            review_slidess[slideNow-1].classList.add('presl');
+            review_slidess[slideNow-1].classList.remove('act');
+            review_slidess[slideNow-1].classList.remove('nexsl');
+            review_slidess[slideNow+1].classList.remove('presl');
+            review_slidess[slideNow+1].classList.remove('act');
+        }, 1200);
+    }
+    else if (positionDiff > 0){
+        causolo.style.transition = '1.2s ease-in-out';
+        causolo.style.transform = 'translateX(' + (-positionCurrent - widthWapper) +'px)';
+        slideNow -= 1;
+        if (slideNow < 2){
+            slideNow = 3;
+        }
+        setTimeout(()=>{
+            causolo.style.transition = 'all 0s ease';
+            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
+            review_slidess[slideNow].classList.add('act');
+            review_slidess[slideNow].classList.remove('presl');
+            review_slidess[slideNow].classList.remove('nextsl');
+            review_slidess[slideNow+1].classList.add('nextsl');
+            review_slidess[slideNow-1].classList.add('presl');
+            review_slidess[slideNow-1].classList.remove('act');
+            review_slidess[slideNow-1].classList.remove('nexsl');
+            review_slidess[slideNow+1].classList.remove('presl');
+            review_slidess[slideNow+1].classList.remove('act');
+        }, 1200);
+    }
+}
 
-// let h1 = wapper.offsetWidth;
+const dragStop = ()=>{
+    isDragStart = false;
+    causolo.classList.remove('dragging');
+}
 
-// var reviewShowslide = (h1)=>{
-//     const widthSlideandMargin = h1;
-//     const widthCausolo = widthSlideandMargin * review_slides.length;
-//     console.log(causolo);
-//     causolo.style.width = `${widthCausolo} px`;
-//     const widthSlide = widthSlideandMargin - 10;
-//     review_slides.forEach(re_slide=>{
-//         re_slide.style.width = `${widthSlide} px`;
-//         console.log(widthSlide);
-//     })
+causolo.addEventListener('mousedown', dragStart);
+causolo.addEventListener('mousemove', dragging);
+causolo.addEventListener('mouseup', dragEnd);
 
-// }
-// reviewShowslide(h1);
+// set button slide
+const button_pre = document.querySelector('.pre-slide');
+const button_next = document.querySelector('.next-slide');
+
+button_next.addEventListener('click', () => {
+    causolo.style.transition = '1.2s ease-in-out';
+        causolo.style.transform = 'translateX(' + (-positionCurrent - widthWapper) +'px)';
+        slideNow -= 1;
+        if (slideNow < 2){
+            slideNow = 3;
+        }
+        setTimeout(()=>{
+            causolo.style.transition = 'all 0s ease';
+            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
+            review_slidess[slideNow].classList.add('act');
+            review_slidess[slideNow].classList.remove('presl');
+            review_slidess[slideNow].classList.remove('nextsl');
+            review_slidess[slideNow+1].classList.add('nextsl');
+            review_slidess[slideNow-1].classList.add('presl');
+            review_slidess[slideNow-1].classList.remove('act');
+            review_slidess[slideNow-1].classList.remove('nexsl');
+            review_slidess[slideNow+1].classList.remove('presl');
+            review_slidess[slideNow+1].classList.remove('act');
+        }, 1200);
+})
+button_pre.addEventListener('click', ()=>{
+    causolo.style.transition = 'all 1.2s ease';
+        causolo.style.transform = 'translateX(' + (-positionCurrent + widthWapper) +'px)';
+        slideNow += 1;
+        if (slideNow > 3){
+            slideNow = 2;
+        }
+        setTimeout(()=>{
+            
+            causolo.style.transition = 'all 0s ease';
+            causolo.style.transform = 'translateX('+(-positionCurrent)+'px)';
+            review_slidess[slideNow].classList.add('act');
+            review_slidess[slideNow].classList.remove('presl');
+            review_slidess[slideNow].classList.remove('nextsl');
+            review_slidess[slideNow+1].classList.add('nextsl');
+            review_slidess[slideNow-1].classList.add('presl');
+            review_slidess[slideNow-1].classList.remove('act');
+            review_slidess[slideNow-1].classList.remove('nexsl');
+            review_slidess[slideNow+1].classList.remove('presl');
+            review_slidess[slideNow+1].classList.remove('act');
+        }, 1200);
+})
+
+
 
