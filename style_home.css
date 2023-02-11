@@ -403,11 +403,18 @@ header{
     text-align: center;
     background-color: #fcfcfc;
 }
+.list_destinantion{
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
 .list_destinantion .dong1{
     flex: 0 0 50%;
     max-width: 50%;
     position: relative;
-    height: auto;
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -426,13 +433,15 @@ header{
     position: relative;
     margin: 0 0 30px;
     overflow: hidden;
+    padding-bottom: -6.2px; 
 }
 .destination-item a{
     width: 100%;
-    height: fit-content;
+    height: 100%;
     display: block;
     border-radius: 5px;
     overflow: hidden;
+    /* padding-bottom: -6,31px; */
 }
 .destination-item a::before {
     width: 100%;
@@ -446,13 +455,7 @@ header{
     z-index: 2;
     border-radius:5px;
 }
-.list_destinantion{
-    margin-top: 60px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.destination-item img{
+.destination-item a img{
     width: 100%;
     height: auto;
 }
@@ -468,6 +471,7 @@ header{
 .infor-des h3{
     font-family: "Abril Fatface", cursive;
     color: #fff;
+    text-align: left!important;
 }
 .destination-item:hover img{
     transform: scale(1.2);
@@ -621,13 +625,18 @@ header{
     position: relative;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 10px 30px rgb(0 0 0 / 9%);
-    margin: 30px 15px;
-    z-index: -1;
+    padding: 30px 15px;
 }
 .tour-item img, .review-left img{
     height: auto;
     max-width: 100%;
+}
+.tour-card{
+    border: none;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 9%);
+    position: relative;
+    margin: 0 0 30px;
+    z-index: -1;
 }
 .tour-duration{
     position: absolute;
@@ -1163,5 +1172,11 @@ footer p{
     .tour-item, .bloger{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .container{
+        width: 100%;
+        max-width: none;
     }
 }

@@ -1,0 +1,64 @@
+.container{
+    max-width: 1200px;
+}
+.booking{
+    width: 100%;
+    background: #D6EEED;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+}
+.title{
+    line-height: 52px;
+    margin: 0 0 25px;
+    font-family: "Heebo", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+input{
+    margin-top: 1rem;
+    height: 66px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.25rem;
+}
+.loai1{
+    display: block;
+    width: 100%;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.loai2{
+    margin-top: 1rem;
+    max-width: 50%;
+}
+.loai2 input{
+    width: 100%;
+}
+.choses{
+    width: 100%;
+    border: 1px solid #A4CECC;
+    border-radius: 5px;
+    height: 66px;
+    line-height: 66px;
+    color: #8D8E92;
+    font-size: 16px;
+    padding: 10px 15px ;
+    transition: all 0.3s ease;
+    /* margin-right: 1rem; */
+}
+select{
+    outline: none;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+}

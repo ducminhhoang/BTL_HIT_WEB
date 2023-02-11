@@ -8,7 +8,7 @@
     <title>Tourest</title>
     <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="/destination.css">
-    <link rel="stylesheet" href="./destination.css">
+    <link rel="stylesheet" href="./booking.css">
     <link rel="shortcut icon" href="./img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,10 +33,10 @@
             <a href="./index.html"><img src="./img/logo.png" alt=""></a>
         </div>
         <div class="header__center">
-            <li><a href="./index.html">Home</a></li>
+            <li class="active"><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About Us</a></li>
             <li><a href="./tours.html">Tours</a></li>
-            <li class="active"><a href="./destination.html">Destination</a></li>
+            <li><a href="./destination.html">Destination</a></li>
             <li><a href="./blog.html">Blog</a></li>
             <li><a href="./contact.html">Contact Us</a></li>
         </div>
@@ -47,127 +47,45 @@
             <span class="icon"></span>
         </button>
         <div class="header__menu">
-            <li><a href="./index.html">Home</a></li>
+            <li class="active"><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About Us</a></li>
             <li><a href="./tours.html">Tours</a></li>
             <li><a href="./destinantion">Destination</a></li>
             <li><a href="./blog.html">Blog</a></li>
-            <li class="active"><a href="./contact.html">Contact Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
             <a href="./loggin.html" class="button">Booking Now</a>
         </div>
     </header>
     <div id="banner">
         <div class="banner__main">
-            <h2>Destination</h2>
+            <h2>Booking</h2>
             <div class="banner-tag">
                 <li><a href="./index.html">Home</a></li>
                 <li>/</li>
-                <li class="active">Destination</li>
+                <li class="active">Booking</li>
             </div>
         </div>
     </div>
-    <section>
-        <div class="destination">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-12">
-                        <div class="destination-item">
-                            <a href="./tours.html">
-                                <img src="./img/desti1.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Malé</h4>
-                                    <h3>Maldives</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-md-12">
-                        <div class="destination-item">
-                            <a href="./tours.html">
-                                <img src="./img/desti2.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Bangkok</h4>
-                                    <h3>Thailand</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                
-                    <div class="col-md-4">
-                        <div class="destination-item">
-                            <a href="./tours.html">
-                                <img src="./img/desti3.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Kuala Lumpur</h4>
-                                    <h3>Malaysia</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="destination-item ">
-                            <a href="./tours.html">
-                                <img src="./img/desti4.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Kathmandu</h4>
-                                    <h3>Nepal</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="destination-item">
-                            <a href="./tours.html">
-                                <img src="./img/desti5.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Jakarta</h4>
-                                    <h3>Indonesia</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="destination-item col-4">
-                            <a href="./tours.html">
-                                <img src="./img/desti3.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Kuala Lumpur</h4>
-                                    <h3>Malaysia</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="destination-item col-4">
-                            <a href="./tours.html">
-                                <img src="./img/desti4.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Kathmandu</h4>
-                                    <h3>Nepal</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="destination-item col-4">
-                            <a href="./tours.html">
-                                <img src="./img/desti5.png" alt="">
-                                <div class="infor-overlay">
-                                    <h4>Jakarta</h4>
-                                    <h3>Indonesia</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
+    <div class="container">
+        <div class="booking">
+            <form action="booking">
+                <div class="title">Book This Tour</div>
+                <input type="text" placeholder="Enter your name" class="loai1" id="name">
+                <input type="text" placeholder="Enter email address" class="loai1" id ="email">
+                <div class="loai2">
+                    <select class="choses" id="country">
+                        <option selected="">Country</option>
+                        <option>United States</option>
+                        <option>France</option>
+                        <option>UK</option>
+                    </select>
                 </div>
-            </div>
+                <div class="loai2">
+                    <input type="text" data-provide="datepicker" class="form-control start-date" placeholder="Date to" id="dateto">
+                </div>
+            </form>
         </div>
-        
-        
-                
-    
-    </section>            
+    </div>
     <footer>
         <div class="footer__top">
             <div class="footer__top-item col1">
