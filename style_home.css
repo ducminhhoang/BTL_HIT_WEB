@@ -620,8 +620,8 @@ header{
     overflow: hidden;
 }
 .tour-item{
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
     position: relative;
     width: 100%;
     max-width: 400px;
@@ -1106,8 +1106,8 @@ footer p{
         flex-wrap: wrap;
     }
     .tour-item{
-        flex: 0 0 45%;
-        max-width: 45%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     .card-blogers{
         flex-wrap: wrap;
